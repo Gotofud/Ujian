@@ -1,0 +1,28 @@
+  <div class="mb-3 mt-3">
+          <p><strong>No:</strong> <?php echo $no;?></p>
+          <p><strong>Nama:</strong> <?php echo $nama;?></p>
+          <p><strong>Unit Pendidikan:</strong> <?php echo $unit;?></p>
+          <p><strong>Tanggal Gaji:</strong> <?php echo $tgl;?></p>
+        </div>
+        <hr>
+        <h3 class="text-center">Gaji</h3>
+        <p><strong>Jabatan:</strong> <?php echo $jabatan;?></p>
+        <p><strong>Gaji:</strong> <?php echo "Rp" . number_format($gaji);?></p>
+        <p><strong>Lama Kerja:</strong> <?php echo $lamaKerja . " Tahun";?></p>
+        <p><strong>Tunjangan Lama Kerja:</strong> <?php echo "Rp" . number_format($tunjangan);?></p>
+        <p><strong>Status Kerja:</strong> <?php echo $status;?></p>
+        <p><strong>Bonus:</strong> <?php echo "Rp" . number_format($bonus);?></p>
+        <p><strong>Gaji Kotor:</strong> <?php echo "Rp" . number_format($gaji_kotor);?></p>
+        <hr>
+        <h3 class="text-center">Potongan</h3>
+        <p><strong>BPJS:</strong> <?php echo "Rp" . number_format($bpjs);?></p>
+        <p><strong>Pinjaman:</strong> <?php echo "Rp" . number_format($pinjaman);?></p>
+        <p><strong>Tabungan:</strong><?php echo "Rp" . number_format($tabungan);?></p>
+        <p><strong>Lainnya:</strong> <?php echo "Rp" . number_format($lainnya);?></p>
+        <p><strong>Total Potongan:</strong><?php echo "Rp" . number_format($total_potongan);?></p>
+        <hr>
+        <div class="total text-center">
+        <h3>Total</h3>
+        <h3>Gaji Bersih : <?php echo "Rp" . number_format($gaji_bersih);?></h3>
+      </div>
+    </div>
