@@ -123,8 +123,8 @@
               <label for="exampleInputName1" class="form-label">Status</label>
               <select name="status" class="form-select" required>
                 <option value="kosong">Pilih Status</option>
-                <option value="kontrak">Kontrak</option>
-                <option value="tetap">Tetap</option>
+                <option value="Kontrak">Kontrak</option>
+                <option value="Tetap">Tetap</option>
               </select>
             </div>
           </div>

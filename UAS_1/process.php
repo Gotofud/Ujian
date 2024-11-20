@@ -32,7 +32,7 @@ if (isset(($_POST['kirim']))) {
         $tunjangan = 0;
     }
 
-    if ($status == "tetap") {
+    if ($status == "Tetap") {
         $bonus = 500000;
     } else {
         $bonus = 0;
@@ -133,6 +133,11 @@ $cetak->gajiBersih($gaji, $tunjangan, $bonus, $bpjs, $pinjaman, $cicilan, $infaq
                 <th scope="row">Jabatan</th>
                 <td>:</td>
                 <td><?php echo $jabatan; ?></td>
+            </tr>
+            <tr>
+                <th scope="row">Status</th>
+                <td>:</td>
+                <td><?php echo $status; ?></td>
             </tr>
             <tr>
                 <th scope="row">Gaji</th>
