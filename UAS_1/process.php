@@ -26,7 +26,7 @@ if (isset(($_POST['kirim']))) {
         $gaji = 2500000;
     }
 
-    if ($lamaKerja >= 5 && $waktu == "tahun") {
+    if ($lamaKerja >= 5 && $waktu == "Tahun") {
         $tunjangan = 1000000;
     } else {
         $tunjangan = 0;
