@@ -79,6 +79,10 @@ $cetak->gajiBersih($gaji, $tunjangan, $bonus, $bpjs, $pinjaman, $cicilan, $infaq
         img {
             width: 100px;
         }
+
+        table {
+            font-size: 15px;
+        }
     </style>
 </head>
 
@@ -105,9 +109,6 @@ $cetak->gajiBersih($gaji, $tunjangan, $bonus, $bpjs, $pinjaman, $cicilan, $infaq
     </header>
 
     <div class="card mx-auto" style="width: 74rem; height:auto">
-        <div class="card header bg-success text-white">
-            <h4 class="form-title mt-3 mx-4">Struk Gaji</h4>
-        </div>
         <table class="m-3">
             <tr>
                 <th scope="row">No</th>
@@ -135,9 +136,9 @@ $cetak->gajiBersih($gaji, $tunjangan, $bonus, $bpjs, $pinjaman, $cicilan, $infaq
                 <td><?php echo $jabatan; ?></td>
             </tr>
             <tr>
-                <th scope="row">Status</th>
-                <td>:</td>
-                <td><?php echo $status; ?></td>
+                <th scope="row">Status <hr></th>
+                <td>: <hr></td>
+                <td><?php echo $status; ?><hr></td>
             </tr>
             <tr>
                 <th scope="row">Gaji</th>
@@ -155,13 +156,13 @@ $cetak->gajiBersih($gaji, $tunjangan, $bonus, $bpjs, $pinjaman, $cicilan, $infaq
                 <td><?php echo "Rp" . number_format($tunjangan); ?></td>
             </tr>
             <tr>
-                <th scope="row">Bonus</th>
-                <td>:</td>
-                <td><?php echo "Rp" . number_format($bonus); ?></td>
+                <th scope="row">Bonus <hr></th>
+                <td>: <hr></td>
+                <td><?php echo "Rp" . number_format($bonus); ?><hr></td>
             </tr>
             <tr>
                 <th scope="row">BPJS</th>
-                <td>:</td>
+                <td spacing="0">:</td>
                 <td><?php echo "Rp" . number_format($bpjs); ?></td>
             </tr>
             <tr>
