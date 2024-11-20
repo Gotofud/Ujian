@@ -5,6 +5,7 @@ if (isset(($_POST['kirim']))) {
     $nama = $_POST['nama'];
     $unit = $_POST['unit'];
     $tgl = $_POST['tgl'];
+    $waktu = $_POST['waktu'];
     //  Gaji
     $jabatan = $_POST['jabatan'];
     $lamaKerja = $_POST['lama_kerja'];
@@ -25,7 +26,7 @@ if (isset(($_POST['kirim']))) {
         $gaji = 2500000;
     }
 
-    if ($lamaKerja >= 5) {
+    if ($lamaKerja >= 5 && $waktu == "tahun") {
         $tunjangan = 1000000;
     } else {
         $tunjangan = 0;
@@ -36,12 +37,13 @@ if (isset(($_POST['kirim']))) {
     } else {
         $bonus = 0;
     }
-    class gaji  {
+    class gaji
+    {
         public $gaji_bersih;
 
-     public function gajiBersih($gaji, $tunjangan,$bonus,$bpjs,$pinjaman,$cicilan,$infaq)
+        public function gajiBersih($gaji, $tunjangan, $bonus, $bpjs, $pinjaman, $cicilan, $infaq)
         {
-            $this->gaji_bersih = ($gaji + $tunjangan + $bonus) - ($bpjs + $pinjaman + $cicilan + $infaq);    
+            $this->gaji_bersih = ($gaji + $tunjangan + $bonus) - ($bpjs + $pinjaman + $cicilan + $infaq);
         }
 
     }
@@ -140,7 +142,12 @@ $cetak->gajiBersih($gaji, $tunjangan, $bonus, $bpjs, $pinjaman, $cicilan, $infaq
             <tr>
                 <th scope="row">Lama Kerja</th>
                 <td>:</td>
-                <td><?php echo $lamaKerja; ?></td>
+                <td><?php echo $lamaKerja . " " . $waktu; ?></td>
+            </tr>
+            <tr>
+                <th scope="row">Tunjangan</th>
+                <td>:</td>
+                <td><?php echo "Rp" . number_format($tunjangan); ?></td>
             </tr>
             <tr>
                 <th scope="row">Bonus</th>
@@ -150,7 +157,7 @@ $cetak->gajiBersih($gaji, $tunjangan, $bonus, $bpjs, $pinjaman, $cicilan, $infaq
             <tr>
                 <th scope="row">BPJS</th>
                 <td>:</td>
-                <td><?php echo "Rp" .  number_format($bpjs); ?></td>
+                <td><?php echo "Rp" . number_format($bpjs); ?></td>
             </tr>
             <tr>
                 <th scope="row">Pinjaman</th>
